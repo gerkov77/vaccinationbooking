@@ -60,6 +60,7 @@ for (var i = 0; i < dropdowns.length; i++){
  const dropDownTrigger = document.getElementById("drp")
  dropDownTrigger.addEventListener("click", openDropdown)
  function openDropdown() {
+   console.log("dropdown trigger clicked")
    M.dropdown.init(dropdown)
    dropdown.open()
  }
