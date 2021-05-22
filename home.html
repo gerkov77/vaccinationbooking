@@ -37,7 +37,7 @@
         <li class="right hide-on-med-and-down"><a href="sino.html">Sinopharm</a></li>
         <li class="right hide-on-med-and-down"><a href="sputnik.html">Sputnik V</a></li>
         <li class="right hide-on-med-and-down"><a href="janssen.html">Janssen </a></li>
-        <li class="dropdown-trigger right hide-on-large-only"><a  href="#!" data-target="dropdown1">Vakcinák<i class="material-icons right">arrow_drop_down</i></a></li>  
+        <li id="drp" class="dropdown-trigger right hide-on-large-only"><a   data-target="dropdown1">Vakcinák<i class="material-icons right">arrow_drop_down</i></a></li>  
       </ul>
            <!-- Dropdown Trigger -->
            
@@ -56,6 +56,13 @@ for (var i = 0; i < dropdowns.length; i++){
 	M.Dropdown.init(dropdowns[i]);
 }
   });
+ const dropdown = document.getElementById("dropdown1")
+ const dropDownTrigger = document.getElementById("drp")
+ dropDownTrigger.addEventListener("click", openDropdown)
+ function openDropdown() {
+   M.dropdown.init(dropdown)
+   dropdown.open()
+ }
   </script>
 </body>          
 </html>
