@@ -44,7 +44,11 @@
     console.log("DOMContentLoaded now")
     var elems = document.querySelectorAll('.dropdown-trigger');
     var options = {};
-    var instances = M.Dropdown.init(elems, options);
+    var dropdowns = M.Dropdown.init(elems, options);
+   
+for (var i = 0; i < dropdowns.length; i++){
+	M.Dropdown.init(dropdowns[i]);
+}
   });
   </script>
 </body>          
