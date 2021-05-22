@@ -55,9 +55,11 @@
 for (var i = 0; i < dropdowns.length; i++){
 	M.Dropdown.init(dropdowns[i]);
 }
+document.getElementById("drp").addEventListener("click", openDropdown)
   });
  
-  document.getElementById("drp").addEventListener("click", openDropdown)
+
+
  function openDropdown() {
    console.log("dropdown trigger clicked")
    const dropdown = document.querySelector('dropdown1')
