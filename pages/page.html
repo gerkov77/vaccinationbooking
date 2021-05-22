@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_self">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <?!= include("page-css"); ?>
+    <?!= include("partials/navbar"); ?>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+    <body>   
+      <div class="container">
+        <h1> <?= title ?></h1>
+        <h3 id="vaccineLabel"><?= vaccine ?></h3>
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="taj" type="text" class="validate" required pattern="^[0-9]{9}$">
+            <label for="taj">Taj Szám</label>
+          </div>
+          <div class="input-field col s6">
+            <input readonly id="nev" type="text" class="input-field">
+            <label for="nev">Név</label>
+          </div>
+        </div> <!--CLOSE ROW-->
+        <div class="row">
+          <div class="input-field col s6">
+            <select id="select">
+              <option value="" disabled selected>Válasszon Időpontot</option>
+                <?!= list ?>
+            </select> 
+          </div>
+          <div class="input-field col s6">
+            <input readonly id="hosp" type="text" class="input-field">
+            <label for="hosp">Oltókórház</label>
+          </div>
+        </div>  <!--CLOSE ROW-->
+        <div class="row">
+          <div class="input-field col s6">
+            <input readonly id="address" type="text" class="input-field">
+            <label for="address">Oltókórház pontos címe</label>
+          </div>
+          <div class="input-field col s6">
+            <input readonly id="station" type="text" class="input-field">
+            <label for="station">Oltópont</label>
+          </div>
+        </div> <!--CLOSE ROW-->
+        <div class="row">
+          <div class="input-field col s6">
+            <input  readonly id="id" type="text" class="input-field">
+            <label  for="count">Sorszám</label>
+          </div>
+        <div class="input-field col s6">
+          <input  readonly id="counterLabel" type="text" class="input-field">
+          <label for="count">Elérhető helyek az időpontra</label>
+        </div>
+      </div> <!--CLOSE ROW-->
+      <div class="row">
+        <button id="btn"  class="btn modal-trigger waves-effect waves-light btn-small">
+        <i class="material-icons left">done</i>Beküld</button>
+        <!-- Modal Structure -->
+        <div style="display: flex; flex-direction: column;"id="modal1" class="modal">
+          <!-- <div id="content"></div> -->
+                     
+         <div class="modal-footer" >
+            <a id="cancel" style="color: red;"class="modal-close waves-effect waves-green btn-flat">Mégsem</a>
+            <a id="ok" style="color: dodgerblue;"class="modal-close waves-effect waves-green btn-flat">Rendben</a>
+          </div>   
+        </div><!-- clode modal structure-->
+      </div> <!--CLOSE ROW-->
+    </div> <!--CLOSE CONTAINER-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <?!= include("page-js"); ?>
+  </body>    
+</html>
