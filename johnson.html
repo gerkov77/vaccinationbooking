@@ -10,20 +10,37 @@
   <title>AstraZeneca</title>
 </head>
 <body>
-  <nav >
-    <div  class="nav-wrapper teal">
-      <a style="padding-left: 12px;" href="home.html" class="brand-logo">Oltás előjegyzés</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="home.html">Főoldal</a></li>
-        <li><a href="pfizer.html">Pfizer</a></li>
-        <li><a href="moderna.html">Moderna</a></li>
-        <li><a href="astra.html">AstraZeneca</a></li>
-        <li><a href="sino.html">Sinopharm</a></li>
-        <li><a href="sputnik.html">Sputnik V</a></li>
-        <li><a href="janssen.html">Janssen </a></li>
-      </ul>
+  <nav>
+    <div class="nav-wrapper teal nav-collapsible">
+      <a style="padding-left: 12px;" href="home.html" class="brand-logo left">Oltás előjegyzés</a>
+      <ul id="nav-mobile" >
+        <li class="right hide-on-med-and-down"><a href="home.html">Főoldal</a></li>
+        <li class="right hide-on-med-and-down"><a href="pfizer.html">Pfizer</a></li>
+        <li class="right hide-on-med-and-down"><a href="moderna.html">Moderna</a></li>
+        <li class="right hide-on-med-and-down"><a href="astra.html">AstraZeneca</a></li>
+        <li class="right hide-on-med-and-down"><a href="sino.html">Sinopharm</a></li>
+        <li class="right hide-on-med-and-down"><a href="sputnik.html">Sputnik V</a></li>
+        <li class="right hide-on-med-and-down"><a href="janssen.html">Janssen </a></li>
+        <a href="#" data-target="slide-out" class="sidenav-trigger right">Vakcinák<i class="material-icons">menu</i></a> 
+      </ul>   
     </div>
   </nav> 
+  <!-- slide out nav -->
+  <ul id="slide-out" class="sidenav">
+    <li><a href="pfizer.html">Pfizer</a></li>
+    <li><a href="moderna.html">Moderna</a></li>
+    <li><a href="astra.html">AstraZeneca</a></li>
+    <li><a href="sino.html">SinoPharm</a></li>
+    <li><a href="sputnik.html">Sputnik</a></li>
+    <li><a href="janssen.html">Janssen</a></li>
+  </ul>
   <iframe src="https://script.google.com/macros/s/AKfycbw2EcAdIWSWvzmC66CqvTkDyGsccqzC7UGOQi1LHLkVf7eLmT0/exec?v=johnson" frameborder="0", width="100%", height="1000px"></iframe>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+var elems = document.querySelectorAll('.sidenav');
+var instances = M.Sidenav.init(elems, {edge: 'right'});
+});
+</script> 
 </body>
 </html>
