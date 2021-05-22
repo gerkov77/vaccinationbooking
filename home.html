@@ -5,13 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <base target="_self">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/> -->
-
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <!-- Compiled and minified JavaScript -->
+
 
 	<title>Document</title>
 </head>
@@ -37,16 +33,24 @@
         <li class="right hide-on-med-and-down"><a href="sino.html">Sinopharm</a></li>
         <li class="right hide-on-med-and-down"><a href="sputnik.html">Sputnik V</a></li>
         <li class="right hide-on-med-and-down"><a href="janssen.html">Janssen </a></li>
-        <li  class="dropdown-trigger right hide-on-large-only"><a  id="drp" href='#'  data-target="dropdown1">Vakcinák<i class="material-icons right">arrow_drop_down</i></a></li>  
+        <li class="dropdown-trigger right hide-on-large-only">
+          <a  class="dropdown-trigger right hide-on-large-only" id="drp" href='#'  data-target="dropdown1">
+            Vakcinák
+            <i class="material-icons right">
+              arrow_drop_down
+            </i>
+          </a>
+        </li>  
       </ul>
            <!-- Dropdown Trigger -->
            
     </div>
   </nav> 
 	<iframe src="https://script.google.com/macros/s/AKfycbw2EcAdIWSWvzmC66CqvTkDyGsccqzC7UGOQi1LHLkVf7eLmT0/exec?" frameborder="0", width="100%", height="1000px"></iframe>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
-  
-  document.addEventListener('DOMContentLoaded', function() {
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+
+document.addEventListener('DOMContentLoaded', function() {
     console.log("DOMContentLoaded now")
     var elems = document.querySelectorAll('.dropdown-trigger');
     var options = {};
@@ -55,20 +59,23 @@
 for (var i = 0; i < dropdowns.length; i++){
 	const dropdown = M.Dropdown.init(dropdowns[i]);
   dropdown.addEventListener('click', openDropdown)
+  console.log("Added eventlistener to " + dropdown)
 }
-
-
-  });
+});
  
- 
-
- function openDropdown() {
+function openDropdown() {
    console.log("opendropdown called  !!")
 const elem = document.getElementById("drp")
   var instance = M.Dropdown.getInstance(elem);
-   M.dropdown.init(dropdown)
-   dropdown.open()
+   M.dropdown.init(instance)
+   instance.dropdown()
  }
-  </script>
+ 
+   </script>   
+
+
+
+
+  
 </body>          
 </html>
