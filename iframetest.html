@@ -1,12 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-</head>
-<body>
-	<iframe src="https://script.google.com/macros/s/AKfycbw2EcAdIWSWvzmC66CqvTkDyGsccqzC7UGOQi1LHLkVf7eLmT0/exec?" frameborder="0", width="100%", height="1000px"></iframe>
-</body>          
-</html>
+
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src='https://8x8.vc/external_api.js' async></script>
+        <style>html, body, #jaas-container { height: 100%; }</style>
+        <script type="text/javascript">
+          window.onload = () => {
+            const api = new JitsiMeetExternalAPI("8x8.vc", {
+              roomName: "vpaas-magic-cookie-88ae474697404af499ee147af8753ed2/SampleAppHopefulScalesStunCasually",
+              parentNode: document.querySelector('#jaas-container'),
+              jwt: "eyJraWQiOiJ2cGFhcy1tYWdpYy1jb29raWUtODhhZTQ3NDY5NzQwNGFmNDk5ZWUxNDdhZjg3NTNlZDIvMjEyZjczLVNBTVBMRV9BUFAiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJqaXRzaSIsImV4cCI6MTYyMTkwMzU4NSwibmJmIjoxNjIxODk2MzgwLCJpc3MiOiJjaGF0Iiwicm9vbSI6IioiLCJzdWIiOiJ2cGFhcy1tYWdpYy1jb29raWUtODhhZTQ3NDY5NzQwNGFmNDk5ZWUxNDdhZjg3NTNlZDIiLCJjb250ZXh0Ijp7ImZlYXR1cmVzIjp7ImxpdmVzdHJlYW1pbmciOmZhbHNlLCJvdXRib3VuZC1jYWxsIjpmYWxzZSwidHJhbnNjcmlwdGlvbiI6ZmFsc2UsInJlY29yZGluZyI6ZmFsc2V9LCJ1c2VyIjp7Im1vZGVyYXRvciI6dHJ1ZSwibmFtZSI6IlRlc3QgVXNlciIsImlkIjoiZ29vZ2xlLW9hdXRoMnwxMTM1MTg3Njk0Nzg2MzEzMTMzMzQiLCJhdmF0YXIiOiIiLCJlbWFpbCI6InRlc3QudXNlckBjb21wYW55LmNvbSJ9fX0.A-CJMeJcD71wFYND4zKEec2oAtGRvS6eWnliFAeXGAYjPYOXmRKGOUOgKnyv3wrGNL0a8CdiUnypzr2-nt_YmhDkNpu-G7jec1mDnMedc4vJGEb_ME6sEK2U6EJGAFOC6dIZLmoyetUCxfFiQZPF8CDOm0RFcNMA_Bj3awrDGpfjYN-Y7aTviNPpgqZFw9HZIIM7gMG-ehow8hCXsbyNMZ5vbip60DBCsl_jue2FHYzMbpfEMosTNnTm6IRv3AqDqhqEiqYJgIzWtwY-uGKyuPfG74jse7efzOy6fUXLa7mzovR_PKszRK5yHN0nG89an6NQuXyJiz-x21cqaLChTA"
+            });
+          }
+        </script>
+      </head>
+      <body><div id="jaas-container" /></body>
+    </html>
+  
